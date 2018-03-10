@@ -9,12 +9,11 @@ import java.util.Arrays;
 import java.util.Collection;
 
 @RunWith(Parameterized.class)
-public class TwoSumTest {
+public class TwoSumIITest {
     @Parameterized.Parameters
     public static Collection data() {
         return Arrays.asList(new Object[][]{
-                {new int[]{2, 3, 4}, 6, new int[]{0, 2}},
-                {new int[]{0, 0, 2, 4}, 0, new int[]{0, 1}},
+                {new int[]{2, 7, 11, 15}, 9, new int[]{1, 2}}
         });
     }
 
@@ -22,7 +21,7 @@ public class TwoSumTest {
     private int target;
     private int[] expected;
 
-    public TwoSumTest(int[] nums, int target, int[] expected) {
+    public TwoSumIITest(int[] nums, int target, int[] expected) {
         this.nums = nums;
         this.target = target;
         this.expected = expected;
@@ -30,7 +29,7 @@ public class TwoSumTest {
 
     @Test
     public void solve() {
-        TwoSum solution = new TwoSum();
+        TwoSumII solution = new TwoSumII();
         int[] res = solution.solve(nums, target);
         for (int i = 0; i < expected.length; i++) {
             Assert.assertEquals(expected[i], res[i]);
