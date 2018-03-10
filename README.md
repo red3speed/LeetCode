@@ -1,6 +1,9 @@
-### LeetCode solutions in Java
+# LeetCode solutions in Java
 -------------
 
-__Array__
+### Easy
 
-- Two Sum
+|#|1|
+|:-------|:--|
+|1|[Two Sum](src/main/java/easy/TwoSum.java)|
+
